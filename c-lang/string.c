@@ -38,4 +38,5 @@ void string_free(string_t s) {
 int main() {
 	string_t s = string_new("hello", strlen("hello"));
 	printf("%s\n", s);
+	string_free(s);
 }
