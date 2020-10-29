@@ -36,7 +36,8 @@ void string_free(string_t s) {
 }
 
 int main() {
-	string_t s = string_new("hello", strlen("hello"));
+	const char str[] = "hello\0world";
+	string_t s = string_new(str, sizeof(str));
 	printf("%s\n", s);
 	string_free(s);
 }
